@@ -72,6 +72,24 @@ public class StockManager
     }
     
     /**
+     * Finds a product by its name
+     * @param name string used to search for product
+     * @return The product that is found, or null if none match with name
+     */
+    public Product findProduct(String name) {
+        int index = 0;
+        while(index < stock.size()) {
+            if(stock.get(index).getName().equalsIgnoreCase(name)) {
+                return stock.get(index);
+            }
+            else {
+                index ++;
+            }
+        }
+        return null;
+    }
+    
+    /**
      * Locate a product with the given ID, and return how
      * many of this item are in stock. If the ID does not
      * match any product, return zero.
