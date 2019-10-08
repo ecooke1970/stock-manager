@@ -59,6 +59,11 @@ public class StockManager
      */
     public Product findProduct(int id)
     {
+        // for(Product prod : stock) {
+            // if(prod.getID() == id) {
+                // return prod;
+            // }
+        // }
         int index = 0;
         while(index < stock.size()) {
             if(stock.get(index).getID() == id) {
@@ -77,6 +82,11 @@ public class StockManager
      * @return The product that is found, or null if none match with name
      */
     public Product findProduct(String name) {
+        // for(Product prod : stock) {
+            // if(prod.getName().equalsIgnoreCase(name)) {
+                // return prod;
+            // }
+        // }
         int index = 0;
         while(index < stock.size()) {
             if(stock.get(index).getName().equalsIgnoreCase(name)) {
