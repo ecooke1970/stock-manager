@@ -21,12 +21,18 @@ public class StockManager
     }
 
     /**
-     * Add a product to the list.
+     * Add a product to the list only if the product id is unique
      * @param item The item to be added.
      */
     public void addProduct(Product item)
     {
-        stock.add(item);
+        if(findProduct(item.getID()) == null) {
+            stock.add(item);
+        }
+        else {
+            System.out.println("\nAn item with the product id: " + item.getID() + " already exists");
+            System.out.println(findProduct(item.getID()).toString());
+        }
     }
     
     /**
