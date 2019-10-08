@@ -77,7 +77,7 @@ public class StockManager
     }
     
     /**
-     * Finds a product by its name
+     * Try to find a product in the stock with the given name
      * @param name string used to search for product
      * @return The product that is found, or null if none match with name
      */
