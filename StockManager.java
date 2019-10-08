@@ -100,4 +100,20 @@ public class StockManager
             }
         }
     }
+    
+    /**
+     * Prints a list of all products with a stock level less than
+     * the passed in parameter
+     * @param below print stock that is less than this number
+     */
+    public void printStockBelow(int below) {
+        System.out.println("\nProducts that have less than " + below + " stock");
+        System.out.println("------------------------------------------------");
+        for(Product prod : stock) {
+            if(prod.getQuantity() < below) {
+                System.out.println(prod.toString());
+            }
+        }
+    }
+    
 }
